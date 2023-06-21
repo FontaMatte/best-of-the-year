@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8">
-  <title>Songs</title>
-</head>
-<body>
-<h1>Best Songs</h1>
-<ul>
-  <li th:each="title : ${Titles}" th:text="${title}"></li>
-</ul>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Songs</title>
+  </head>
+  <body>
+    <h1>Best Songs</h1>
+    <ul>
+      <li th:each="song : ${songs}">
+        <a th:href="@{/songs/{id}(id=${song.id})}" th:text="${song.title}"></a>
+      </li>
+      <a href="/home">Back to Home</a>
+    </ul>
+  </body>
 </html>

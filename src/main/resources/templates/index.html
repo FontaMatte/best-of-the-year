@@ -5,10 +5,26 @@
     <title>Best of the year</title>
 </head>
 <body>
-    <h1>
-        Best of the year by
-        <span th:text="${myName}"></span>
-    </h1>
+    <div class="container mt-4">
+        <h1>
+            Welcome to Best of the Year!
+        </h1>
+        <p>
+            Choose a category:
+        </p>
+        <ul>
+            <li>
+                <a th:href="@{/movies}">Movies</a>
+            </li>
+            <li>
+                <a th:href="@{/songs}">Songs</a>
+            </li>
+        </ul>
+    </div>
+<!--    <h1>-->
+<!--        Best of the year by-->
+<!--        <span th:text="${myName}"></span>-->
+<!--    </h1> -->
 
 </body>
 </html>
